@@ -13,7 +13,7 @@
         <div class="row">
             <div class="column border boder-black">
                 <h4>Agregar una tarea</h4>
-                <form action="agregar" method="GET">
+                <form action="{% url 'mis-tareas-agregar' %}" method="GET">
                     <label name="nombre">Nombre</label>
                     <input type="text" name="nombre">
                     <input type="submit" value="Agregar">
