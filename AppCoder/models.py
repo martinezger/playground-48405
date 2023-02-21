@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils import timezone
 
 class Tarea(models.Model):
     nombre = models.TextField(max_length=100)
