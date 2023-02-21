@@ -15,11 +15,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from AppCoder.views import saludar, saludar_a
+from AppCoder.views import (saludar, 
+                            saludar_a, 
+                            mostrar_mis_tareas, 
+                            agregar_una_tarea, 
+                            terminar_una_tarea,
+                            borrar_una_tarea)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hola-mundo/saludar', saludar),
     path('hola-mundo/saludar/<nombre>', saludar_a),
-    path('hola-mundo/saludar/<nombre>/<apellido>', saludar_a)
+    path('hola-mundo/saludar/<nombre>/<apellido>', saludar_a),
+    path('mis-tareas/', mostrar_mis_tareas, name="mis-tareas"),
+    path('mis-tareas/agregar', agregar_una_tarea, name="mis-tareas-agregar"),
+    path('mis-tareas/terminar/<id>', terminar_una_tarea, name="mis-tareas-terminar"),
+    path('mis-tareas/borrar/<id>', borrar_una_tarea, name="mis-tareas-borrar"),
 ]
+
+
+
