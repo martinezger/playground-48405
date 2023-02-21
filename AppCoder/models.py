@@ -9,7 +9,6 @@ class Tarea(models.Model):
 
     def terminar(self):
         self.estado = "terminado"
-        self.terminado_el = timezone.now()
 
 
     def __str__(self):
